@@ -4,6 +4,7 @@ sidebar_position: 2
 
 # Quick setup
 
+Setup a new Hardhat project with Semaphore.
 Learn how to create and test an Ethereum smart contract that uses zero-knowledge proofs to verify membership.
 
 To checkout the code used in this guide, visit the [semaphore-quick-setup](https://github.com/cedoor/semaphore-quick-setup) repository.
@@ -122,7 +123,7 @@ Create a `./static` folder and add the following file:
 ```
 
 :::info
-The previous identity commitments have been generated using `@zk-kit/identity` (with a message strategy) and Metamask for signing the messages with the first 3 Ethereum accounts of the [Hardhat dev wallet](https://hardhat.org/hardhat-network/reference/#accounts).
+To generate these identity commitments, we used `@zk-kit/identity` (with a message strategy) and then signed the messages in Metamask with the first 3 Ethereum accounts of the [Hardhat dev wallet](https://hardhat.org/hardhat-network/reference/#accounts).
 :::
 
 ## Create a [Hardhat task](https://hardhat.org/guides/create-task.html#creating-a-task) to deploy your contract
