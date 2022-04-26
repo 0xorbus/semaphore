@@ -129,14 +129,14 @@ The previous identity commitments have been generated using `@zk-kit/identity` (
 
 1. Install `@zk-kit/incremental-merkle-tree` and `circomlibjs@0.0.8` to create offchain Merkle trees.
 
-```bash
-$ yarn add @zk-kit/incremental-merkle-tree circomlibjs@0.0.8 --dev
+```sh
+yarn add @zk-kit/incremental-merkle-tree circomlibjs@0.0.8 --dev
 ```
 
 2. Install `hardhat-dependency-compiler` to deploy a local verifier.
 
-```bash
-$ yarn add hardhat-dependency-compiler --dev
+```sh
+yarn add hardhat-dependency-compiler --dev
 ```
 
 3. Create a `tasks` folder and add the following file:
@@ -175,6 +175,15 @@ task("deploy", "Deploy a Greeters contract")
   })
 ```
 
+4. Use `yarn` to install `@anomiclabs/hardhat-waffle` and its dependencies.
+   [`hardhat-waffle`](https://hardhat.org/plugins/nomiclabs-hardhat-waffle.html)
+   is a Hardhat plugin that lets you use the [Waffle](https://getwaffle.io/) test framework
+   to test your smart contracts.
+
+```sh
+yarn add -D @nomiclabs/hardhat-waffle 'ethereum-waffle@^3.0.0' @nomiclabs/hardhat-ethers 'ethers@^5.0.0'
+```
+
 4. Set up your `hardhat.config.js` file:
 
 ```javascript title="./hardhat.config.js"
@@ -193,7 +202,7 @@ module.exports = {
 
 ## Create your tests
 
-1. Creating proofs requires some static files, in the future these files will be hosted on a server and made public. For now you can use the ones used in [our repository](https://github.com/appliedzkp/semaphore/tree/main/build/snark) for testing. Copy these files in the `static` folder.
+1. Creating proofs requires some static files, in the future these files will be hosted on a server and made public. For now, you can use the files in [our repository](https://github.com/appliedzkp/semaphore/tree/main/build/snark). Download these files and copy them to the `static` folder.
 
 2. Update the Hardhat test file:
 
@@ -251,8 +260,8 @@ describe("Greeters", function () {
 3. Compile and test your contract:
 
 ```bash
-$ yarn hardhat compile
-$ yarn hardhat test
+yarn hardhat compile
+yarn hardhat test
 ```
 
 ## Deploy your contract in a local network
