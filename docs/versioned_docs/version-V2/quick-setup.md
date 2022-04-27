@@ -61,7 +61,7 @@ For more detail about _Semaphore base contracts_, see [Contracts](https://semaph
 In this step, you create a `Greeters` contract that imports and extends the Semaphore base contract.
 
 1. In `./contracts`, rename `Greeter.sol` to `Greeters.sol`.
-2. Replace the contents of `Greeters.sol` with the following code:
+2. Replace the contents of `Greeters.sol` with the following:
 
   ```solidity title="./semaphore-example/contracts/Greeters.sol"
   //SPDX-License-Identifier: MIT
@@ -140,7 +140,7 @@ yarn add @zk-kit/incremental-merkle-tree circomlibjs@0.0.8 --dev
 yarn add hardhat-dependency-compiler --dev
 ```
 
-3. Create a `tasks` folder and add the following file:
+3. Create a `tasks` folder and add a `./tasks/deploy.js` file that contains the following:
 
 ```javascript title="./tasks/deploy.js"
 const { IncrementalMerkleTree } = require("@zk-kit/incremental-merkle-tree")
